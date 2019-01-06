@@ -109,11 +109,25 @@ def main():
 ###############################################################################
 class Baby():
 
-    def __init__(self, name, ):
-        self.name = 'name'
+    def __init__(self, name):
+        self.name = name
+        print('hello baby', name)
+        self.time = 0
+
     def feed_baby(self):
+        print('thank you for feeding', self.name)
+        self.time = 0
 
+    def hour_passes(self):
 
+        if self.time == 0:
+            print('Baby', self.name, 'is sleeping')
+        if self.time ==1:
+            print('Baby', self.name, 'is awake. Time for food')
+        if self.time >= 3:
+            print('Baby', self.name, 'is crying uncontrollably! Feed the Baby!')
+
+        self.time = self.time + 1
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

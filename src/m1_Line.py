@@ -692,7 +692,7 @@ class Line(object):
         # floating-point errors while distinguishing numbers that really
         # are different from each other.
         #######################################################################
-        
+
 
     def reset(self):
         """
