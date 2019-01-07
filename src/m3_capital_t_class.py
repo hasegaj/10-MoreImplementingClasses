@@ -322,14 +322,14 @@ class CapitalT(object):
         # IMPORTANT RESTRICTION: You are NOT permitted to add any instance
         # variables beyond  h_rect  and  v_rect, at any point of this exercise.
         #######################################################################
-        clone1 = self.h_rect.clone()
-        clone2 = self.v_rect.clone()
-        clone1.outline_color = self.h_rect.outline_color
-        clone1.fill_color = self.h_rect.fill_color
-        clone2.fill_color = self.v_rect.fill_color
-        clone2.outline_color = self.v_rect.outline_color
-
-        return 
+        thickness = self.v_rect.get_width()
+        height = self.v_rect.get_height()
+        width = self.h_rect.get_width()
+        r = self.h_rect.get_center()
+        #intersection = rg.Point(r.x, r.y - height/2)
+        t = CapitalT(r, width, height, thickness)
+        t.set_colors(self.h_rect.fill_color, self.h_rect.outline_color)
+        return t
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
